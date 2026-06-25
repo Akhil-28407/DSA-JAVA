@@ -94,6 +94,41 @@ public class LinkedListCoding {
         return false;
     }
 
+    public Node FindKthNodeFromEnd(int k){
+        if(head==null || k<=0){
+            return null;
+        }
+        Node fast=head;
+        Node slow=head;
+        for(int i=0;i<k;i++){
+            if(fast == null){
+                return null;
+            }
+            fast=fast.next;
+        }
+        while(fast != null){
+            slow=slow.next;
+            fast=fast.next;
+        }
+        return slow;
+    }
+
+    public void removeDuplicates(){
+        Node current=head;
+        while(current != null){
+            Node runner=current;
+            while(runner.next != null){
+                if(runner.next.value == current.value){
+                    runner.next=runner.next.next;
+                }
+                else{
+                    runner=runner.next;
+                }
+            }
+            current=current.next;
+        }
+    }
+
    
 
 }

@@ -5,13 +5,19 @@ public class Main {
         LinkedListCoding mylinkedlist=new LinkedListCoding(1);
         mylinkedlist.append(2);
         mylinkedlist.append(3);
-        mylinkedlist.append(4);
+        mylinkedlist.append(3);
         mylinkedlist.append(5);
+        mylinkedlist.append(2);
 
-        mylinkedlist.deleteMiddle();
+        //System.out.println(mylinkedlist.FindKthNodeFromEnd(4).value);
+        //mylinkedlist.removeDuplicates();
+        
         
 
         mylinkedlist.printList();
+
+        
+        
         
     }
 
